@@ -63,7 +63,7 @@ class Title extends React.Component {
                                 onKeyPress = {(event)=>this.keyPressHandler(event)}
                                 onBlur = {(event)=>this.blurHandler(event)}
                                 type="text" 
-                                placeholder = "Type Your Input Here"
+                                placeholder = "Type Your Title Here"
                                 value={this.state.title}
                                 
                             />
