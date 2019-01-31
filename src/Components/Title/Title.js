@@ -8,7 +8,7 @@ class Title extends React.Component {
         super(props)
 
         this.state = {
-            title: "This is a Dumy Title",
+            title: "Type Your Counter Title Here",
             isInput:false
         }
 
