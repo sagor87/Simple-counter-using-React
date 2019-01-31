@@ -51,21 +51,34 @@ class Title extends React.Component {
         if(this.state.isInput){
             output = (
                 <div className="Title">
-                    <input 
-                    className="form-control" 
-                    onChange = {(event)=>this.inputChange(event)}
-                    onKeyPress = {(event)=>this.keyPressHandler(event)}
-                    onBlur = {(event)=>this.blurHandler(event)}
-                    type="text" 
-                    value={this.state.title}
-                    />
+                        <div class="input-group">
+                            <div class="input-group-prepend" >
+                                <span class="input-group-text"style={{color:"blue"}}>Title: </span>
+                            </div>
+                            
+                            <input 
+                                className="form-control" 
+                                style={{color:"green"}}
+                                onChange = {(event)=>this.inputChange(event)}
+                                onKeyPress = {(event)=>this.keyPressHandler(event)}
+                                onBlur = {(event)=>this.blurHandler(event)}
+                                type="text" 
+                                placeholder = "Type Your Input Here"
+                                value={this.state.title}
+                                
+                            />
+                    </div>
                 </div>
             )
         }else{
             output = (
                 <div className="d-flex Title">
                     <h1 className="display-4">{this.state.title}</h1>
-                    <span onClick={()=> this.editHandler()} className="ml-auto edit-icon"><i className="fas fa-pen"></i></span> 
+                    <span
+                        onClick={()=> this.editHandler()} 
+                        className="ml-auto edit-icon">
+                        <i className="fas fa-pen"></i>
+                     </span> 
                 </div>
             )
         }
